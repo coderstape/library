@@ -13,6 +13,6 @@ class Author extends Model
 
     public function setDobAttribute($dob)
     {
-        $this->attributes['dob'] = Carbon::parse($dob);
+        $this->attributes['dob'] = Carbon::createFromFormat('m/d/Y', $dob);
     }
 }
