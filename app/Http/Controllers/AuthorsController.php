@@ -21,7 +21,7 @@ class AuthorsController extends Controller
     {
         return request()->validate([
             'name' => 'required',
-            'dob' => 'required',
+            'dob' => 'required|date_format:m/d/Y',
         ]);
     }
 }
